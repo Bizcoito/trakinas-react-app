@@ -1,0 +1,40 @@
+.text-center {
+  text-align: center;
+}
+
+.trakinas-logo {
+  height: 30px;
+  width: 30px;
+  margin: 0 5px;
+}
+
+.trakinas-navbar-btn {
+  margin: 20px 5px;
+}
+
+.book-thumbnail {
+  width: auto;
+  height: auto;
+  max-width: 170px;
+}
+
+.book-thumbnail img {
+   width: 160px;
+}
+
+.fake-navbar div {
+  display: inline;
+}
+
+.search-bar-input {
+  width: 50%;
+  margin-left: 5px;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #55595c;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: .25rem;
+}

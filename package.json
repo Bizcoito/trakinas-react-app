@@ -1,12 +1,19 @@
 {
-  "name": "create-react-app-now",
+  "name": "trakinas-library-app",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
     "react-scripts": "0.9.5",
-    "serve": "^5.0.1"
+    "serve": "^5.0.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-15": "^1.0.5",
+    "jest": "^22.0.6"
   },
   "dependencies": {
+    "firebase": "^4.8.2",
+    "axios": "^0.16.2",
+    "eslint": "^4.15.0",
+    "lodash": "^3.10.1",
     "react": "^15.4.0",
     "react-dom": "^15.4.0",
     "react-router": "^4.0.0",
