@@ -28,7 +28,7 @@ class CreateBookForm extends Component {
     alert(`The book ${this.state.name} was created in the records!`);
     event.preventDefault();
 
-    const dbInterface = new FirebaseManager;
+    const dbInterface = new FirebaseManager();
     const booksRepository = new BooksRepository(dbInterface);
     booksRepository.createBook(this.state);
 

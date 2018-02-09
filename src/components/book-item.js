@@ -1,12 +1,11 @@
 import React from 'react';
-import FirebaseManager from '../firebase-manager';
 import BookActionButton from './book-action-button';
 
 const BookItem = ({ book }) => {
   return (
     <div className="list-group-item media row">
       <div className="media-left book-thumbnail">
-        <img className="media-object" src={book.thumbnail} />
+        <img className="media-object" src={book.thumbnail} alt="book cover" />
       </div>
       <div className="media-body">
         <div className="media-heading">
