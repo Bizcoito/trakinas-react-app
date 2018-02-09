@@ -1,4 +1,5 @@
 import * as firebase from 'firebase';
+import uuidv4 from 'uuid/v4';
 
 const config = {
   apiKey: 'AIzaSyB2EahiG5p4IF3aYbg6hpQN2PNWMaAKXgs',
@@ -53,14 +54,21 @@ class FirebaseManager {
   }
 
   createBook(bookData) {
-    const newBookKey = firebase.database().ref().child('books').push().key;
-    const bookId = { bookId: newBookKey };
-    const firebaseBookData = { ...bookId, ...bookData };
-    const updates = {};
+    const data = FirebaseManager.prepareBookDataForCreation(bookData);
 
-    updates['/books/' + newBookKey] = firebaseBookData;
+    firebase.database().ref().update(data);
+  }
 
-    firebase.database().ref().update(updates);
+  static prepareBookDataForCreation(bookData) {
+    const book = bookData;
+    const id = uuidv4();
+    book['available'] = true;
+    book['bookId'] = id;
+    delete book.action
+
+    const data = {};
+    data[`books/${id}`] = book;
+    return data;
   }
 
   getBooks() {
