@@ -1,5 +1,4 @@
 import React from 'react';
-import FirebaseManager from '../firebase-manager';
 import BookActionButton from './book-action-button';
 
 const BookItem = ({ book }) => {

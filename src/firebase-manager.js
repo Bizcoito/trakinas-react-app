@@ -1,23 +1,38 @@
 import * as firebase from 'firebase';
 
-const config = {
-  apiKey: 'AIzaSyB2EahiG5p4IF3aYbg6hpQN2PNWMaAKXgs',
-  authDomain: 'bizcoitera.firebaseapp.com',
-  databaseURL: 'https://bizcoitera.firebaseio.com',
-  projectId: 'bizcoitera',
-  storageBucket: 'bizcoitera.appspot.com',
-  messagingSenderId: '976257491287'
+const getEnvConfig = () => {
+  let config = {
+    apiKey: 'AIzaSyAItuCrizWjUjITrls8bcMv8tJm_4iSYgM',
+    authDomain: 'trakinas-dev.firebaseio.com',
+    databaseURL: 'https://trakinas-dev.firebaseio.com/',
+    projectId: 'trakinas-dev',
+    storageBucket: 'trakinas-dev.appspot.com',
+    messagingSenderId: '933462607227'
+  }
+
+  if (process.env.NODE_ENV === 'production') {
+    config = {
+      apiKey: 'AIzaSyB2EahiG5p4IF3aYbg6hpQN2PNWMaAKXgs',
+      authDomain: 'bizcoitera.firebaseapp.com',
+      databaseURL: 'https://bizcoitera.firebaseio.com',
+      projectId: 'bizcoitera',
+      storageBucket: 'bizcoitera.appspot.com',
+      messagingSenderId: '976257491287'
+    }
+  }
+
+  return config;
 };
 
 class FirebaseManager {
   constructor() {
     if (!firebase.apps.length) {
-      firebase.initializeApp(config);
+      firebase.initializeApp(getEnvConfig());
     }
   }
 
   static init() {
-    firebase.initializeApp(config);
+    firebase.initializeApp(getEnvConfig());
   }
 
   static updateBookAttribute(book, field, value) {
