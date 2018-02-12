@@ -10,7 +10,7 @@ const getEnvConfig = () => {
     messagingSenderId: '933462607227'
   }
 
-  if (process.env.PRODUCTION) {
+  if (process.env.NODE_ENV === 'production') {
     config = {
       apiKey: 'AIzaSyB2EahiG5p4IF3aYbg6hpQN2PNWMaAKXgs',
       authDomain: 'bizcoitera.firebaseapp.com',
