@@ -1,7 +1,8 @@
-# Bizcoito Library Trakinas
-
-## Component Sketch
-![image](https://user-images.githubusercontent.com/6999140/27522097-60b12f1c-59f1-11e7-92a5-7d3d377d31e2.png)
+# Bizcoito/Trakinas Library - A SPA app made in React JS
 
 ## App preview
-![image](https://user-images.githubusercontent.com/6999140/28001121-3a29ca86-64f8-11e7-8877-4d067a525458.png)
+![image](https://user-images.githubusercontent.com/6999140/36120625-cfb070e0-1011-11e8-8a49-a3835c255622.png)
+
+### License
+
+MIT
