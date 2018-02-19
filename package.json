@@ -3,11 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "react-scripts": "0.9.5",
-    "serve": "^5.0.1",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-15": "^1.0.5",
-    "jest": "^22.0.6"
+    "jest": "^22.0.6",
+    "react-addons-test-utils": "^15.6.2",
+    "react-scripts": "0.9.5",
+    "react-test-renderer": "^15.5.0",
+    "serve": "^5.0.1"
   },
   "dependencies": {
     "axios": "^0.16.2",
@@ -26,6 +34,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "now -e REACT_APP_SECRET_CODE=secretcode"
+    "deploy": "now -e --public"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/test/test-setup.js"
   }
 }
