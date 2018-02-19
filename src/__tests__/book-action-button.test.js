@@ -12,7 +12,7 @@ describe('BookActionButton', () => {
     description: 'SistemasDeInformação',
     thumbnail: 'http://pix.toile-libre.org/upload/original/1499647888.png',
     available: true,
-    xunda: 'xunda',
+    action: 'borrow',
   }
 
   const bookLiteralStates = {

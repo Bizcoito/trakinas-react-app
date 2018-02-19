@@ -9,6 +9,8 @@ describe('BookItem', () => {
     name: 'Xunda',
     description: 'Damironga',
     thumbnail: 'http://pix.toile-libre.org/upload/original/1499647888.png',
+    available: false,
+    action: 'return',
   }
 
   it('renders correctly', () => {
