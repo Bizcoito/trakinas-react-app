@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FirebaseManager from '../firebase-manager';
+import BooksRepository from '../books-repository';
 
 class BookActionButton extends Component {
   constructor(props) {
@@ -33,8 +34,20 @@ class BookActionButton extends Component {
     });
   }
 
+  createNewBook() {
+    const dbInterface = new FirebaseManager();
+    const booksRepository = new BooksRepository(dbInterface);
+
+    booksRepository.createBook(this.state.book);
+  }
+
   onButtonClick() {
-    this.updateAvailableAttribute(!this.state.book.available);
+    if (this.state.book.action === 'save') {
+      this.createNewBook();
+      alert(`The book ${this.state.name} was created in the records!`);
+    } else {
+      this.updateAvailableAttribute(!this.state.book.available);
+    }
   }
 
 

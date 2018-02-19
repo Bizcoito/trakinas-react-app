@@ -8,6 +8,7 @@ exports[`BookItem renders correctly 1`] = `
     className="media-left book-thumbnail"
   >
     <img
+      alt="book cover"
       className="media-object"
       src="http://pix.toile-libre.org/upload/original/1499647888.png"
     />

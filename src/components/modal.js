@@ -11,7 +11,6 @@ class Modal extends Component {
 			width: '100%',
 			height: '100%',
 			overflow: 'auto',
-			height: '100%',
 			zIndex: 1
 		};
 
@@ -45,8 +44,8 @@ class Modal extends Component {
 
 	render() {
 		return (
-			<div style={{...this.outerStyle, display: this.props.isModalOpen ? 'block' : 'none'}}>
-  			<div style={this.style.overlay} onClick={this.props.closeModal}></div>
+			<div style={{ ...this.outerStyle, display: this.props.isModalOpen ? 'block' : 'none' }}>
+				<div style={this.style.overlay} onClick={this.props.closeModal}></div>
 				<div style={this.style.modal}>
 					{this.props.children}
 				</div>

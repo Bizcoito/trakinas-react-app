@@ -13,7 +13,7 @@ import FetchGoogleBooks from './components/fetch-google-books';
 class App extends Component {
   constructor(props) {
     super(props);
-    const dbInterface = new FirebaseManager;
+    const dbInterface = new FirebaseManager();
 
     this.booksRepository = new BooksRepository(dbInterface);
     this.state = {
@@ -80,7 +80,7 @@ class App extends Component {
     const navbarInstance = (
       <div className="row fake-navbar">
         <div className="col-3">
-          <img className="trakinas-logo" src="https://avatars3.githubusercontent.com/u/29185183?s=200&v=4" />
+          <img className="trakinas-logo" src="https://avatars3.githubusercontent.com/u/29185183?s=200&v=4" alt="trakinas logo" />
           <button className="btn btn-info trakinas-navbar-btn"
             onClick={() => { this.toggleModal('AddBookManually', true) }}>
             New book
